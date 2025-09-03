@@ -10,38 +10,41 @@ class Program
         string grade_str = Console.ReadLine();
         //convert grade str to an integer
         int grade = int.Parse(grade_str);
+        // creating a letter variable to store in the letter grade
+        string letter;
 
-        // Determine which letter grade the user got
+        // If statements for determining what letter grade did the user get
         if (grade >= 90)
         {
-            Console.WriteLine("A");
+            letter = "A";
         }
         else if (grade >= 80)
         {
-            Console.WriteLine("B");
+            letter = "B";
         }
         else if (grade >= 70)
         {
-            Console.WriteLine("C");
+            letter = "C";
         }
         else if (grade >= 60)
         {
-            Console.WriteLine("D");
+            letter = "D";
         }
         else
         {
-            Console.WriteLine("F");
+            letter = "F";
         }
 
-        // Separate Statement for printing out a message for the user if they pass or not
+        Console.WriteLine($"You got a {letter}");
+
         if (grade > 70)
         {
-            Console.WriteLine("Congratulations you passed the class!");
+            Console.WriteLine("Congratulations, You passed the class!");
         }
-        else {
-            Console.WriteLine("Oh, you failed the class, but there's always next time! focus on the next one! Good Luck!");
+        else
+        {
+            Console.WriteLine("Oh you failed, but don't worry there's always next time!");
         }
-
 
 
 
