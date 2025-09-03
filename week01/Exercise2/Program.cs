@@ -13,6 +13,29 @@ class Program
         // creating a letter variable to store in the letter grade
         string letter;
 
+        // Get the last digit of the grade
+        char last_d_str = grade_str[grade_str.Length - 1];
+        // Need to convert the last d str to an integer
+        int last_digit = int.Parse(last_d_str.ToString());
+        // A variable for storing + and - sign
+        string symbols;
+
+        if (last_digit < 3)
+        {
+            symbols = "-";
+        }
+        else if (last_digit >= 7)
+        {
+            symbols = "+";
+        }
+        else
+        {
+            symbols = "";
+        }
+
+
+
+
         // If statements for determining what letter grade did the user get
         if (grade >= 90)
         {
@@ -35,8 +58,23 @@ class Program
             letter = "F";
         }
 
-        Console.WriteLine($"You got a {letter}");
+        // Extra improvement on the code regarding A+, F+ and F-
+        if (grade > 90 && last_digit >= 7)
+        {
+            symbols = "";
+            Console.WriteLine($"You got a {letter}{symbols}");
+        }
+        else if (letter == "F")
+        {
+            symbols = "";
+            Console.WriteLine($"You got a {letter}");
+        }
+        else
+        {
+            Console.WriteLine($"You got a {letter}{symbols}");
+        }
 
+        // Printing out the messages that corresponds to each grade
         if (grade > 70)
         {
             Console.WriteLine("Congratulations, You passed the class!");
