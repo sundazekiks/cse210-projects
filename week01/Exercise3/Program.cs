@@ -6,20 +6,28 @@ class Program
     {
         Console.Write("What is the magic number? ");
         int magicNumber = int.Parse(Console.ReadLine());
-        Console.Write("What is your guess? ");
-        int guessNumber = int.Parse(Console.ReadLine());
+        
+        bool keep_asking = true;
 
-        if (guessNumber > magicNumber)
+        while (keep_asking)
         {
-            Console.WriteLine("Lower");
-        }
-        else if (guessNumber == magicNumber)
-        {
-            Console.WriteLine("You guessed it!");
-        }
-        else
-        {
-            Console.WriteLine("Higher");
+            Console.Write("What is your guess? ");
+            int guessNumber = int.Parse(Console.ReadLine());
+
+            if (guessNumber == magicNumber)
+            {
+                Console.Write("You guessed it!");
+                break;
+            }
+            else if (guessNumber > magicNumber)
+            {
+                Console.WriteLine("Lower");
+
+            }
+            else
+            {
+                Console.WriteLine("Higher");
+            }
         }
     }
 }
