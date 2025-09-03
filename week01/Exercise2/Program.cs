@@ -28,9 +28,18 @@ class Program
         {
             Console.WriteLine("D");
         }
-        else if (grade < 60)
+        else
         {
             Console.WriteLine("F");
+        }
+
+        // Separate Statement for printing out a message for the user if they pass or not
+        if (grade > 70)
+        {
+            Console.WriteLine("Congratulations you passed the class!");
+        }
+        else {
+            Console.WriteLine("Oh, you failed the class, but there's always next time! focus on the next one! Good Luck!");
         }
 
 
