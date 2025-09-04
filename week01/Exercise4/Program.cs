@@ -62,8 +62,6 @@ class Program
 
         Console.WriteLine($"The largest number {largeNum}");
 
-        // Getting the lowest positive number in the numbers list
-        int count = 0;
         // lowest number
         int lowestNum = numbers[0];
 
@@ -79,7 +77,7 @@ class Program
 
         Console.WriteLine($"The smallest positive number is {lowestNum}");
         Console.WriteLine("The sorted list is: ");
-        
+
         foreach (int num in numbers)
         {
             Console.WriteLine(num);
