@@ -9,7 +9,7 @@ class Program
     {
         // A variable for running the program
         bool runProgram = true;
-        
+
         // This stores the the user's journal entry in the mean time
         List<(string Time, string Question, string Entry)> journalEntries = new List<(string, string, string)>();
 
@@ -34,7 +34,7 @@ class Program
                 case 1:
                     Console.WriteLine("You chose to write a journal entry.");
                     // Code to write a journal entry
-                    string filePath = "/Users/travisabuton/Desktop/Projects/cse210-projects/week02/Journal/questions.txt";
+                    string filePath = Path.Combine("..", "..", "..", "questions.txt");
                     string[] lines = System.IO.File.ReadAllLines(filePath);
 
                     Random rand = new Random();
@@ -77,11 +77,11 @@ class Program
                     Console.WriteLine("You chose to load journal entries from a file.");
                     // Code to load journal entries from a file
 
-                    string filename = "/Users/travisabuton/Desktop/Projects/cse210-projects/week02/Journal/journal.txt";
+                    string filename = Path.Combine("..", "..", "..", "journal.txt");
                     string[] fileLines = System.IO.File.ReadAllLines(filename);
                     int fileLength = fileLines.Length;
 
-                    
+
                     // Loop through each line in the file 
                     foreach (string line in fileLines)
                     {
@@ -100,7 +100,7 @@ class Program
                         }
                     }
 
-                    
+
                     Console.WriteLine("Journal entries loaded from file.");
                     break;
                 case 4:
@@ -137,8 +137,10 @@ class Program
             writeEntryC.SaveToFile();
         }
 
-        
+
 
     }
+    
+    
 
 }
