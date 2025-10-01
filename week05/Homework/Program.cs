@@ -8,8 +8,9 @@ class Program
 
        Console.WriteLine(JakeAssignment.getSummary());
        Console.WriteLine(JakeAssignment.GetHomeworkList());
+        Console.WriteLine("");
 
-        WritingAssignment JohnAssigment = new WritingAssignment("Mary Waters", "European History", "The Causes of World War II by Mary Waters");
+        WritingAssignment JohnAssigment = new WritingAssignment("Mary Waters", "European History", "The Causes of World War II");
         Console.WriteLine(JohnAssigment.getSummary());
         Console.WriteLine(JohnAssigment.GetWritingInformation());
 
